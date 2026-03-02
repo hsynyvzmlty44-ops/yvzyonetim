@@ -95,6 +95,7 @@ export async function GET() {
     }
 
     // 5. Stats from all transactions for this apartment
+    const now = new Date();
     const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
     const { data: allTransactions } = await admin
       .from('transactions')
